@@ -1,5 +1,5 @@
 name: 'Run PHPMD with ReviewDog'
-description: '🐶 Run PHP Mess Detector with ReviewDog.'
+description: '🐾 Run PHP Mess Detector with ReviewDog.'
 author: 'Mike Bronner'
 inputs:
   github_token:
@@ -33,5 +33,5 @@ runs:
     - ${{ inputs.target_directory }}
 
 branding:
-  icon: 'check'
-  color: 'blue'
+  icon: 'check-circle'
+  color: 'green'
