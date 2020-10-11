@@ -16,7 +16,7 @@ inputs:
 
   standard:
     description: Coding standard or path to configuration file
-    default: 'PSR1,PSR2,PSR12'
+    default: 'cleancode,codesize,controversial,design,naming,unusedcode'
 
   target_directory:
     description: Directory to run checks against.
