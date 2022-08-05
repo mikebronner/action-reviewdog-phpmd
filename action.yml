@@ -22,6 +22,10 @@ inputs:
     description: Directory to run checks against.
     default: 'src'
 
+  exclude:
+    description: List of exclude patterns
+    default: ''
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -31,6 +35,7 @@ runs:
     - ${{ inputs.reporter }}
     - ${{ inputs.standard }}
     - ${{ inputs.target_directory }}
+    - ${{ inputs.exclude }}
 
 branding:
   icon: 'check-circle'

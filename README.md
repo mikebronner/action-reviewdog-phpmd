@@ -52,4 +52,5 @@ or a custom rules configuration file path.
                 reporter: 'github-pr-check'
                 standard: 'cleancode,codesize,controversial,design,naming,unusedcode'
                 target_directory: 'src'
+                exclude: '*/Migrations/*'
 ```
