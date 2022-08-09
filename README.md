@@ -53,4 +53,5 @@ or a custom rules configuration file path.
                 standard: 'cleancode,codesize,controversial,design,naming,unusedcode'
                 target_directory: 'src'
                 exclude: '*/Migrations/*'
+                name: 'PHPMD'
 ```

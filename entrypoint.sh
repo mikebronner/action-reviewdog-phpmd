@@ -15,4 +15,4 @@ fi;
 
 php /usr/local/bin/phpmd.phar ${INPUT_TARGET_DIRECTORY}${excludeOption} text ${INPUT_STANDARD} \
     | sed -r "s/([0-9]+)\s+/\1:/gI" \
-    | reviewdog -name=PHPMD -f=phpstan -reporter=${INPUT_REPORTER} -level=${INPUT_LEVEL} -diff='git diff'
+    | reviewdog -name="${INPUT_NAME}" -f=phpstan -reporter=${INPUT_REPORTER} -level=${INPUT_LEVEL} -diff='git diff'
