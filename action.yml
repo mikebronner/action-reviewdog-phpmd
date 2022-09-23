@@ -30,6 +30,10 @@ inputs:
     description: The name of the check
     default: 'PHPMD'
 
+  baseline_file:
+    description: A baseline file
+    default: ''
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -41,6 +45,7 @@ runs:
     - ${{ inputs.target_directory }}
     - ${{ inputs.exclude }}
     - ${{ inputs.name }}
+    - ${{ inputs.baseline_file }}
 
 branding:
   icon: 'check-circle'
