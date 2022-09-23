@@ -22,6 +22,18 @@ inputs:
     description: Directory to run checks against.
     default: 'src'
 
+  exclude:
+    description: List of exclude patterns
+    default: ''
+
+  name:
+    description: The name of the check
+    default: 'PHPMD'
+
+  baseline_file:
+    description: A baseline file
+    default: ''
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -31,6 +43,9 @@ runs:
     - ${{ inputs.reporter }}
     - ${{ inputs.standard }}
     - ${{ inputs.target_directory }}
+    - ${{ inputs.exclude }}
+    - ${{ inputs.name }}
+    - ${{ inputs.baseline_file }}
 
 branding:
   icon: 'check-circle'
